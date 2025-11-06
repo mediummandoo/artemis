@@ -74,7 +74,8 @@ class FriedmanHStatisticMethod(PartialDependenceBasedMethod):
             show_progress: bool = False,
             batchsize: int = 2000,
             pd_calculator: Optional[PartialDependenceCalculator] = None,
-            calculate_ova: bool = True):
+            calculate_ova: bool = True,
+            n_jobs: int = 1):
         """Calculates H-statistic Feature Interactions Strength and Feature Importance for the given model. 
         Despite pair interactions, this method can also calculate one vs all interactions.
 
@@ -103,8 +104,11 @@ class FriedmanHStatisticMethod(PartialDependenceBasedMethod):
             If None, it will be created from scratch. Default is None.
         calculate_ova : bool
             If True, one vs all interactions will be calculated. Default is True.
+        n_jobs : int
+            Number of parallel jobs to run using Ray. If 1, sequential processing is used. 
+            If > 1, Ray parallel processing is activated. Requires Ray to be installed. Default is 1.
         """
-        super().fit(model, X, n, predict_function, features, show_progress, batchsize, pd_calculator)
+        super().fit(model, X, n, predict_function, features, show_progress, batchsize, pd_calculator, n_jobs)
         if calculate_ova:
             self.ova = self._calculate_ova_interactions_from_pd(show_progress)
 

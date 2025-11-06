@@ -62,8 +62,9 @@ class GreenwellMethod(PartialDependenceBasedMethod):
             features: Optional[List[str]] = None,
             show_progress: bool = False,
             batchsize: int = 2000,
-            pd_calculator: Optional[PartialDependenceCalculator] = None):
-        super().fit(model, X, n, predict_function, features, show_progress, batchsize, pd_calculator)
+            pd_calculator: Optional[PartialDependenceCalculator] = None,
+            n_jobs: int = 1):
+        super().fit(model, X, n, predict_function, features, show_progress, batchsize, pd_calculator, n_jobs)
 
     def plot(self,
              vis_type: str = VisualizationType.HEATMAP,

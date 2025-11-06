@@ -55,6 +55,7 @@ class PartialDependenceBasedImportance(FeatureImportanceMethod):
         show_progress: bool = False,
         batchsize: int = 2000,
         pd_calculator: Optional[PartialDependenceCalculator] = None,
+        n_jobs: int = 1,
     ):
         """Calculates Partial Dependence Based Feature Importance.
         
@@ -82,6 +83,9 @@ class PartialDependenceBasedImportance(FeatureImportanceMethod):
             PartialDependenceCalculator object containing partial dependence values for a given model and dataset. 
             Providing this object speeds up the calculation as partial dependence values do not need to be recalculated.
             If None, it will be created from scratch. Default is None.
+        n_jobs : int
+            Number of parallel jobs to run using Ray. If 1, sequential processing is used. 
+            If > 1, Ray parallel processing is activated. Requires Ray to be installed. Default is 1.
 
         Returns
         -------
@@ -94,7 +98,7 @@ class PartialDependenceBasedImportance(FeatureImportanceMethod):
   
 
         if pd_calculator is None:
-            self.pd_calculator = PartialDependenceCalculator(model, self.X_sampled, self.predict_function, batchsize)
+            self.pd_calculator = PartialDependenceCalculator(model, self.X_sampled, self.predict_function, batchsize, n_jobs, auto_shutdown=True)
         else: 
             if pd_calculator.model != model:
                 raise ValueError("Model in PDP calculator is different than the model in the method.")

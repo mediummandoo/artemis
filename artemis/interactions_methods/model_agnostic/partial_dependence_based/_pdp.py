@@ -48,6 +48,7 @@ class PartialDependenceBasedMethod(FeatureInteractionMethod):
         show_progress: bool = False,
         batchsize: int = 2000,
         pd_calculator: Optional[PartialDependenceCalculator] = None,
+        n_jobs: int = 1,
     ):
         """Calculates Partial Dependence Based Feature Interactions Strength and Feature Importance for the given model.
 
@@ -74,6 +75,9 @@ class PartialDependenceBasedMethod(FeatureInteractionMethod):
             PartialDependenceCalculator object containing partial dependence values for a given model and dataset.
             Providing this object speeds up the calculation as partial dependence values do not need to be recalculated.
             If None, it will be created from scratch. Default is None.
+        n_jobs : int
+            Number of parallel jobs to run using Ray. If 1, sequential processing is used. 
+            If > 1, Ray parallel processing is activated. Requires Ray to be installed. Default is 1.
         """
         self.predict_function = get_predict_function(model, predict_function)
         self.model = model
@@ -84,7 +88,7 @@ class PartialDependenceBasedMethod(FeatureInteractionMethod):
 
         if pd_calculator is None:
             self.pd_calculator = PartialDependenceCalculator(
-                self.model, self.X_sampled, self.predict_function, batchsize
+                self.model, self.X_sampled, self.predict_function, batchsize, n_jobs, auto_shutdown=True
             )
         else:
             if pd_calculator.model != self.model:
