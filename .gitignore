@@ -109,6 +109,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+test_venv/
+venv_artemis/
+artemis/venv_artemis/
 
 # Spyder project settings
 .spyderproject
