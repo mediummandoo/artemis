@@ -16,26 +16,26 @@
 
 ```python
 # Install from your fork
-!pip install git+https://github.com/YOUR-USERNAME/artemis.git
+!pip install git+https://github.com/mediummandoo/artemis.git
 
 # Install specific commit (recommended for stability)
-!pip install git+https://github.com/YOUR-USERNAME/artemis.git@COMMIT-HASH
+!pip install git+https://github.com/mediummandoo/artemis.git@COMMIT-HASH
 
 # Install specific branch
-!pip install git+https://github.com/YOUR-USERNAME/artemis.git@BRANCH-NAME
+!pip install git+https://github.com/mediummandoo/artemis.git@BRANCH-NAME
 ```
 
 ##### Local Installation
 
 ```bash
 # Install from GitHub fork
-pip install git+https://github.com/YOUR-USERNAME/artemis.git
+pip install git+https://github.com/mediummandoo/artemis.git
 
 # Install specific commit (recommended)
-pip install git+https://github.com/YOUR-USERNAME/artemis.git@COMMIT-HASH
+pip install git+https://github.com/mediummandoo/artemis.git@COMMIT-HASH
 
 # Install in editable mode (for development)
-git clone https://github.com/YOUR-USERNAME/artemis.git
+git clone https://github.com/mediummandoo/artemis.git
 cd artemis
 pip install -e .
 ```
@@ -44,7 +44,7 @@ pip install -e .
 
 ```txt
 # requirements.txt
-git+https://github.com/YOUR-USERNAME/artemis.git@COMMIT-HASH
+git+https://github.com/mediummandoo/artemis.git@COMMIT-HASH
 ```
 
 Then install:
@@ -78,26 +78,26 @@ print("✓ Installation successful!")
 
 ```python
 # 포크한 저장소에서 설치
-!pip install git+https://github.com/YOUR-USERNAME/artemis.git
+!pip install git+https://github.com/mediummandoo/artemis.git
 
 # 특정 커밋 설치 (안정성을 위해 권장)
-!pip install git+https://github.com/YOUR-USERNAME/artemis.git@커밋해시
+!pip install git+https://github.com/mediummandoo/artemis.git@커밋해시
 
 # 특정 브랜치 설치
-!pip install git+https://github.com/YOUR-USERNAME/artemis.git@브랜치명
+!pip install git+https://github.com/mediummandoo/artemis.git@브랜치명
 ```
 
 ##### 로컬 설치
 
 ```bash
 # GitHub 포크에서 설치
-pip install git+https://github.com/YOUR-USERNAME/artemis.git
+pip install git+https://github.com/mediummandoo/artemis.git
 
 # 특정 커밋 설치 (권장)
-pip install git+https://github.com/YOUR-USERNAME/artemis.git@커밋해시
+pip install git+https://github.com/mediummandoo/artemis.git@커밋해시
 
 # 개발 모드로 설치 (코드 수정 가능)
-git clone https://github.com/YOUR-USERNAME/artemis.git
+git clone https://github.com/mediummandoo/artemis.git
 cd artemis
 pip install -e .
 ```
@@ -106,7 +106,7 @@ pip install -e .
 
 ```txt
 # requirements.txt
-git+https://github.com/YOUR-USERNAME/artemis.git@커밋해시
+git+https://github.com/mediummandoo/artemis.git@커밋해시
 ```
 
 설치:
