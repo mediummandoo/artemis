@@ -1,39 +1,76 @@
 # ARTEMIS: A Robust Toolkit of Explanation Methods for Interaction Spotting
+
 A Python package with explanation methods for extraction of feature interactions from predictive models
 
-[![build](https://github.com/pyartemis/artemis/actions/workflows/python-app.yml/badge.svg)](https://github.com/pyartemis/artemis/actions/workflows/python-app.yml)
-[![PyPI version](https://badge.fury.io/py/pyartemis.svg)](https://pypi.org/project/pyartemis/)
-[![Downloads](https://static.pepy.tech/badge/pyartemis)](https://pepy.tech/project/pyartemis)
+## English
 
-## Overview
-`artemis` is a **Python** package for data scientists and machine learning practitioners which exposes standardized API for extracting feature interactions from predictive models using a number of different methods described in scientific literature.
+### Installation from Fork
 
-The package provides both model-agnostic (no assumption about model structure), and model-specific (e.g., tree-based models) feature interaction methods, as well as other methods that can facilitate and support the analysis and exploration of the predictive model in the context of feature interactions. 
+This fork includes updated dependencies for better compatibility with the latest package versions.
 
-The available methods are suited to tabular data and classification and regression problems. The main functionality is that users are able to scrutinize a wide range of models by examining feature interactions in them by finding the strongest ones (in terms of numerical values of implemented methods) and creating tailored visualizations.
+```bash
+pip install git+https://github.com/mediummandoo/artemis.git@fix-dependencies2511
+```
+
+### Updated Dependencies
+
+- pandas: 2.2.2
+- numpy: 2.0.2
+- scikit-learn: 1.6.1
+- seaborn: 0.13.2
+- networkx: 3.5
+- matplotlib: 3.10.0
+- And other updated packages
+
+### Google Colab
+
+```python
+!pip install git+https://github.com/mediummandoo/artemis.git@fix-dependencies2511
+```
+
+---
+
+## 한국어
+
+### 포크에서 설치하기
+
+이 포크는 최신 패키지 버전과의 호환성을 위해 의존성을 업데이트했습니다.
+
+```bash
+pip install git+https://github.com/mediummandoo/artemis.git@fix-dependencies2511
+```
+
+### 업데이트된 의존성
+
+- pandas: 2.2.2
+- numpy: 2.0.2
+- scikit-learn: 1.6.1
+- seaborn: 0.13.2
+- networkx: 3.5
+- matplotlib: 3.10.0
+- 기타 패키지 업데이트
+
+### Google Colab
+
+```python
+!pip install git+https://github.com/mediummandoo/artemis.git@fix-dependencies2511
+```
+
+---
+
+## Original Repository
+
+원본 저장소: [https://github.com/pyartemis/artemis](https://github.com/pyartemis/artemis)
 
 ## Documentation
-Full documentation is available at [https://pyartemis.github.io/](https://pyartemis.github.io/).
 
-## Installation
-Latest released version of the `artemis` package is available on [Python Package Index (PyPI)](https://pypi.org/project/pyartemis/):
+Full documentation: [https://pyartemis.github.io/](https://pyartemis.github.io/)
 
-```
-pip install -U pyartemis
-```
-
-The source code and development version is currently hosted on [GitHub](https://github.com/pyartemis/artemis).
-
-***
+---
 
 ## Authors
 
-The package was created as a software project associated with the BSc thesis ***Methods for extraction of interactions from predictive models*** in the field of Data Science (pl. *Inżynieria i analiza danych*) at Faculty of Mathematics and Information Science (MiNI), Warsaw University of Technology in cooperation with NASK National Research Institute.  
-
-The authors of the `artemis` package are: 
+Original authors:
 - [Paweł Fijałkowski](https://github.com/pablo2811)
 - [Mateusz Krzyziński](https://github.com/krzyzinskim)
 - [Artur Żółkowski](https://github.com/arturzolkowski)
-
-BSc thesis and work on the `artemis` package was supervised by [Przemysław Biecek, PhD, DSc](https://github.com/pbiecek). 
-
