@@ -274,7 +274,7 @@ def _conditional_minimal_depth(split_var_to_nodes: dict, depths: np.array, tree_
                         min_val = min(min_val, depths[upper_bound] - current_root_depth)
             conditional_depths.append({"split_variable": f_1, "ancestor_variable": f_2, "value": min_val, "occur": occurence_flag})
 
-    res = pd.DataFrame.from_records(conditional_depths).replace({float("+inf"): None})
+    res = pd.DataFrame.from_records(conditional_depths).replace({float("+inf"): np.nan})
 
     return res
 
